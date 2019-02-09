@@ -1,0 +1,60 @@
+How do I add existing eclipse java project to git
+
+shakti@DESKTOP-AI0CGVE MINGW64 ~/workspace/com.junit
+$ git init
+Initialized empty Git repository in C:/Users/shakti/workspace/com.junit/.git/
+
+shakti@DESKTOP-AI0CGVE MINGW64 ~/workspace/com.junit (master)
+$ git config --global user.name "name"
+
+shakti@DESKTOP-AI0CGVE MINGW64 ~/workspace/com.junit (master)
+$  git config --global user.email  username@gmail.com
+
+shakti@DESKTOP-AI0CGVE MINGW64 ~/workspace/com.junit (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .classpath
+        .project
+        .settings/
+        pom.xml
+        src/
+        target/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+shakti@DESKTOP-AI0CGVE MINGW64 ~/workspace/com.junit (master)
+$ git add .
+warning: LF will be replaced by CRLF in .gitignore.
+The file will have its original line endings in your working directory
+
+shakti@DESKTOP-AI0CGVE MINGW64 ~/workspace/com.junit (master)
+$ git commit -m "Initial Commit"
+ [master (root-commit) 2075136] Initial Commit
+ 
+ 13 files changed, 144 insertions(+)
+ create mode 100644 .classpath
+ create mode 100644 .gitignore
+ create mode 100644 .project
+ create mode 100644 .settings/.jsdtscope
+ create mode 100644 .settings/org.eclipse.jdt.core.prefs
+ create mode 100644 .settings/org.eclipse.m2e.core.prefs
+ create mode 100644 .settings/org.eclipse.wst.common.component
+ create mode 100644 .settings/org.eclipse.wst.common.project.facet.core.xml
+ create mode 100644 .settings/org.eclipse.wst.jsdt.ui.superType.container
+ create mode 100644 .settings/org.eclipse.wst.jsdt.ui.superType.name
+ create mode 100644 .settings/org.eclipse.wst.validation.prefs
+ create mode 100644 pom.xml
+ create mode 100644 src/main/webapp/WEB-INF/web.xml
+
+shakti@DESKTOP-AI0CGVE MINGW64 ~/workspace/com.junit (master)
+$  git remote add origin https://github.com/shaktiyadav/java8.git
+
+shakti@DESKTOP-AI0CGVE MINGW64 ~/workspace/com.junit (master)
+$ git push -u origin master
+
