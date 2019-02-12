@@ -1,0 +1,15 @@
+pipeline {
+   agent none
+    stages {
+        stage('Back-end') {
+            agent {
+                docker { image 'maven:3-alpine' 
+                args '-v /tmp/test/java8 -u="root" -w /tmp/test/java8'
+                }
+            }
+            steps {
+                sh 'mvn --version'
+            }
+        }
+    }
+}
